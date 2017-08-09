@@ -1,0 +1,20 @@
+---
+declared-services:
+  conversation-watson-055115:
+    label: conversation
+    plan: free
+  STT-watson-lab-055115:
+    label: speech_to_text
+    plan: standard
+  TTS-watson-055115:
+    label: text_to_speech
+    plan: standard
+applications:
+- name: cardashboard-watson-lab-055115
+  command: npm start
+  path: .
+  memory: 256M
+  services:
+  - conversation-watson-055115
+  - STT-watson-lab-055115
+  - TTS-watson-055115
